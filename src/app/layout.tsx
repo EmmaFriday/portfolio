@@ -24,7 +24,7 @@ export default function RootLayout({
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var p=new URLSearchParams(window.location.search);var m=p.get('mode');if(m==='dark'||m==='light'){document.documentElement.setAttribute('data-theme',m);try{localStorage.setItem('theme',m)}catch(e){}}}catch(e){}})();`,
+            __html: `(function(){try{var p=new URLSearchParams(window.location.search);var m=p.get('mode');if(m==='dark'||m==='light'){document.documentElement.setAttribute('data-theme',m);try{localStorage.setItem('theme',m)}catch(e){}}else{document.documentElement.setAttribute('data-theme','light');try{localStorage.removeItem('theme')}catch(e){}}}catch(e){}})();`,
           }}
         />
       </head>
