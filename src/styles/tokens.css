@@ -1,25 +1,193 @@
-/* Placeholder -- full token system built in Task 2 */
+/*
+ * Design Token System -- Three-Tier Architecture
+ *
+ * ANTI-PATTERN RULES:
+ * - Components MUST only reference Tier 2 semantic tokens:
+ *   --bg-*, --text-*, --accent-*, --border-*, --shadow-*, --glow-*
+ * - Components MUST NEVER reference Tier 1 primitives: --color-*
+ * - This ensures theme switching is purely a CSS operation
+ *
+ * TIER 1: Primitives (raw values, never used directly in components)
+ * TIER 2: Semantic tokens (meaning-based, what components reference)
+ *   - Light mode: :root defaults
+ *   - Dark mode: [data-theme="dark"] overrides
+ * SHARED: Typography, spacing, layout tokens (identical across themes)
+ */
+
+/* ===================================================================
+   TIER 1: PRIMITIVES
+   Raw color values. Defined in @theme for Tailwind integration.
+   Never referenced directly in components.
+   =================================================================== */
+
 @theme {
+  --color-white: #ffffff;
+  --color-black: #0a0a0f;
+  --color-blue-600: #2563eb;
+  --color-blue-700: #1d4ed8;
+  --color-cyan-400: #22d3ee;
+  --color-cyan-500: #06b6d4;
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
+/* ===================================================================
+   TIER 2: SEMANTIC TOKENS -- Light Mode (default)
+   Meaning-based tokens. These are what components reference.
+   =================================================================== */
+
 :root {
-  --bg-primary: #ffffff;
-  --bg-secondary: #f9fafb;
-  --bg-surface: #ffffff;
-  --text-primary: #111827;
-  --text-secondary: #4b5563;
-  --accent-primary: #2563eb;
-  --border-default: #e5e7eb;
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07);
-  --max-width: 75rem;
-  --text-display: 2.25rem;
-  --text-display-lh: 1.1;
-  --text-h3: 1.5rem;
-  --text-h3-lh: 1.3;
-  --text-lg: 1.125rem;
-  --text-lg-lh: 1.5;
-  --text-body: 1rem;
+  /* Backgrounds */
+  --bg-primary: var(--color-white);
+  --bg-secondary: var(--color-gray-50);
+  --bg-surface: var(--color-white);
+  --bg-surface-elevated: var(--color-white);
+
+  /* Text */
+  --text-primary: var(--color-gray-900);
+  --text-secondary: var(--color-gray-600);
+  /*
+   * --text-muted: For decorative/non-essential content ONLY.
+   * Contrast ratio on white is ~3.0:1, which does NOT meet WCAG AA 4.5:1.
+   * Never use for content users must read. Use --text-secondary instead.
+   */
+  --text-muted: var(--color-gray-400);
+  --text-on-accent: var(--color-white);
+
+  /* Accent */
+  --accent-primary: var(--color-blue-600);
+  --accent-hover: var(--color-blue-700);
+
+  /* Borders */
+  --border-default: var(--color-gray-200);
+  --border-subtle: var(--color-gray-100);
+
+  /* Shadows (Linear-inspired refinement) */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.04);
+
+  /* Glow (none in light mode) */
+  --glow-accent: none;
+  --glow-subtle: none;
+}
+
+/* ===================================================================
+   TIER 2: SEMANTIC TOKENS -- Dark Mode
+   Overrides light mode when data-theme="dark" is set on <html>.
+   =================================================================== */
+
+[data-theme="dark"] {
+  /* Backgrounds */
+  --bg-primary: var(--color-black);
+  --bg-secondary: #0f0f1a;
+  --bg-surface: #1a1a2e;
+  --bg-surface-elevated: #1e1e35;
+
+  /* Text */
+  --text-primary: var(--color-gray-100);
+  --text-secondary: var(--color-gray-300);
+  --text-muted: var(--color-gray-500);
+  --text-on-accent: var(--color-black);
+
+  /* Accent (cyan for sci-fi feel) */
+  --accent-primary: var(--color-cyan-400);
+  --accent-hover: var(--color-cyan-500);
+
+  /* Borders (semi-transparent for sci-fi feel) */
+  --border-default: rgba(255, 255, 255, 0.1);
+  --border-subtle: rgba(255, 255, 255, 0.06);
+
+  /* Shadows (deeper in dark mode) */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5);
+
+  /* Glow (medium cyan -- Vercel energy, not neon terminal) */
+  --glow-accent: 0 0 20px rgba(34, 211, 238, 0.15);
+  --glow-subtle: 0 0 10px rgba(34, 211, 238, 0.08);
+}
+
+/* ===================================================================
+   SHARED TOKENS: Typography
+   Identical across both themes (per user decision: typography does
+   not change between modes).
+   =================================================================== */
+
+:root {
+  /* Body: 16px -> 18px */
+  --text-body: clamp(1rem, 0.958rem + 0.208vw, 1.125rem);
   --text-body-lh: 1.6;
+
+  /* Small: 14px (fixed) */
+  --text-sm: 0.875rem;
+  --text-sm-lh: 1.5;
+
+  /* Large body / lead: 18px -> 22px */
+  --text-lg: clamp(1.125rem, 0.958rem + 0.521vw, 1.375rem);
+  --text-lg-lh: 1.5;
+
+  /* H3: 24px -> 32px */
+  --text-h3: clamp(1.5rem, 1.167rem + 1.042vw, 2rem);
+  --text-h3-lh: 1.3;
+
+  /* H2: 30px -> 48px */
+  --text-h2: clamp(1.875rem, 1.25rem + 2.083vw, 3rem);
+  --text-h2-lh: 1.2;
+
+  /* Display (H1): 36px -> 64px */
+  --text-display: clamp(2.25rem, 1.083rem + 3.889vw, 4rem);
+  --text-display-lh: 1.1;
+
+  /* Letter spacing */
   --tracking-tight: -0.02em;
+  --tracking-normal: 0em;
+
+  /* Font weights */
+  --font-normal: 400;
+  --font-semibold: 600;
+}
+
+/* ===================================================================
+   SHARED TOKENS: Spacing (8pt grid)
+   =================================================================== */
+
+:root {
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-24: 6rem;     /* 96px */
+  --space-32: 8rem;     /* 128px */
+
+  /* Fluid section spacing: 80px -> 160px */
+  --space-section: clamp(5rem, 2.5rem + 8.333vw, 10rem);
+
+  /* Container padding: 16px -> 48px */
+  --space-container: clamp(1rem, 0rem + 3.333vw, 3rem);
+}
+
+/* ===================================================================
+   SHARED TOKENS: Layout
+   =================================================================== */
+
+:root {
+  --max-width: 75rem;            /* 1200px */
+  --header-height: 4rem;         /* 64px */
+  --radius-sm: 0.375rem;         /* 6px */
+  --radius-md: 0.5rem;           /* 8px */
+  --radius-lg: 0.75rem;          /* 12px */
 }
