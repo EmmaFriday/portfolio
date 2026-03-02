@@ -12,7 +12,7 @@ This roadmap delivers a dual-mode portfolio site in five phases, ordered by arch
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation + Design Token System** - Project scaffold, three-tier CSS token system, blocking theme init script, responsive base layout
+- [x] **Phase 1: Foundation + Design Token System** - Project scaffold, three-tier CSS token system, blocking theme init script, responsive base layout
 - [ ] **Phase 2: Content Sections** - All 8 page sections rendered with real case study data from the job search toolkit
 - [ ] **Phase 3: Dual-Mode Theming** - Light and dark modes visually complete and switchable via header toggle
 - [ ] **Phase 4: URL Customization** - Query parameter system for mode control and case study reordering
@@ -33,7 +33,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 Plans:
 - [x] 01-01-PLAN.md -- Project scaffold (Next.js 16 + Tailwind v4 + next-themes) and three-tier CSS design token system
-- [ ] 01-02-PLAN.md -- Responsive layout shell (sticky header, container, sections) and blocking theme init script
+- [x] 01-02-PLAN.md -- Responsive layout shell (sticky header, container, sections) and blocking theme init script
 
 ### Phase 2: Content Sections
 **Goal**: A visitor sees all 8 page sections with real content from the job search toolkit, laid out in the editorial long-page format, and can navigate between them
@@ -103,7 +103,7 @@ Phases execute in numeric order: 1 > 2 > 3 > 4 > 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation + Design Token System | 0/2 | Planned | - |
+| 1. Foundation + Design Token System | 2/2 | Complete | 2026-03-02 |
 | 2. Content Sections | 0/0 | Not started | - |
 | 3. Dual-Mode Theming | 0/0 | Not started | - |
 | 4. URL Customization | 0/0 | Not started | - |
@@ -111,4 +111,4 @@ Phases execute in numeric order: 1 > 2 > 3 > 4 > 5
 
 ---
 *Roadmap created: 2026-03-02*
-*Last updated: 2026-03-02 after Phase 1 planning*
+*Last updated: 2026-03-02 after Phase 1 completion*

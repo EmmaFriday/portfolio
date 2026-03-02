@@ -37,7 +37,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Technical
 
-- [ ] **TECH-01**: Site is responsive across desktop, tablet, and mobile breakpoints
+- [x] **TECH-01**: Site is responsive across desktop, tablet, and mobile breakpoints
 - [ ] **TECH-02**: Both modes pass WCAG 2.1 AA (4.5:1 contrast, keyboard nav, screen reader, focus indicators)
 - [ ] **TECH-03**: Page loads in under 3 seconds on standard connection
 - [ ] **TECH-04**: Open Graph meta tags render professional previews when URL is shared
@@ -120,7 +120,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | URL-03 | Phase 4 | Pending |
 | URL-04 | Phase 4 | Pending |
 | URL-05 | Phase 4 | Pending |
-| TECH-01 | Phase 1 | Pending |
+| TECH-01 | Phase 1 | Complete |
 | TECH-02 | Phase 3 | Pending |
 | TECH-03 | Phase 5 | Pending |
 | TECH-04 | Phase 5 | Pending |
