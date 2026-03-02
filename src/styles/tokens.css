@@ -79,6 +79,9 @@
   /* Glow (none in light mode) */
   --glow-accent: none;
   --glow-subtle: none;
+
+  /* Header (frosted glass) */
+  --bg-header: rgba(255, 255, 255, 0.85);
 }
 
 /* ===================================================================
@@ -115,6 +118,9 @@
   /* Glow (medium cyan -- Vercel energy, not neon terminal) */
   --glow-accent: 0 0 20px rgba(34, 211, 238, 0.15);
   --glow-subtle: 0 0 10px rgba(34, 211, 238, 0.08);
+
+  /* Header (frosted glass) */
+  --bg-header: rgba(10, 10, 15, 0.85);
 }
 
 /* ===================================================================

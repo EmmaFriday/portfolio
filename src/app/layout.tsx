@@ -21,7 +21,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>
-      <body>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var p=new URLSearchParams(window.location.search);var m=p.get('mode');if(m==='dark'||m==='light'){document.documentElement.setAttribute('data-theme',m);try{localStorage.setItem('theme',m)}catch(e){}}}catch(e){}})();`,
+          }}
+        />
+      </head>
+      <body
+        className="min-h-screen antialiased"
+        style={{
+          backgroundColor: "var(--bg-primary)",
+          color: "var(--text-primary)",
+          fontFamily: "var(--font-sans)",
+          fontSize: "var(--text-body)",
+          lineHeight: "var(--text-body-lh)",
+        }}
+      >
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
