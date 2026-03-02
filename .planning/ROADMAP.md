@@ -32,7 +32,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 2 plans
 
 Plans:
-- [ ] 01-01-PLAN.md -- Project scaffold (Next.js 16 + Tailwind v4 + next-themes) and three-tier CSS design token system
+- [x] 01-01-PLAN.md -- Project scaffold (Next.js 16 + Tailwind v4 + next-themes) and three-tier CSS design token system
 - [ ] 01-02-PLAN.md -- Responsive layout shell (sticky header, container, sections) and blocking theme init script
 
 ### Phase 2: Content Sections

@@ -11,9 +11,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [ ] **THEME-01**: Site displays in light mode with clean, white, Notion-like aesthetic and current illustrated character
 - [ ] **THEME-02**: Site displays in dark mode with black background, teal/cyan accents, glowing effects, and sci-fi character placeholder
-- [ ] **THEME-03**: Both modes share identical layout structure -- only visual tokens differ
+- [x] **THEME-03**: Both modes share identical layout structure -- only visual tokens differ
 - [ ] **THEME-04**: Theme toggle is visible in the header, styled as a designed interaction piece
-- [ ] **THEME-05**: No flash of wrong theme on page load (blocking inline script reads URL param before first paint)
+- [x] **THEME-05**: No flash of wrong theme on page load (blocking inline script reads URL param before first paint)
 
 ### Content
 
@@ -103,9 +103,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 |-------------|-------|--------|
 | THEME-01 | Phase 3 | Pending |
 | THEME-02 | Phase 3 | Pending |
-| THEME-03 | Phase 1 | Pending |
+| THEME-03 | Phase 1 | Complete |
 | THEME-04 | Phase 3 | Pending |
-| THEME-05 | Phase 1 | Pending |
+| THEME-05 | Phase 1 | Complete |
 | CONT-01 | Phase 2 | Pending |
 | CONT-02 | Phase 2 | Pending |
 | CONT-03 | Phase 2 | Pending |
