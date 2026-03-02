@@ -29,11 +29,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. CSS custom properties follow the three-tier structure (primitives, semantic, component) and changing the `data-theme` attribute on `<html>` switches all semantic token values without any JavaScript re-render
   3. A blocking inline script in `<head>` reads URL parameters and sets `data-theme` before first paint -- loading with `?mode=dark` and 4x CPU throttle shows zero flash of the wrong theme
   4. Both light and dark token sets pass WCAG 2.1 AA contrast ratios (4.5:1 minimum) for all text/background semantic token pairs
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 01-01: TBD
-- [ ] 01-02: TBD
+- [ ] 01-01-PLAN.md -- Project scaffold (Next.js 16 + Tailwind v4 + next-themes) and three-tier CSS design token system
+- [ ] 01-02-PLAN.md -- Responsive layout shell (sticky header, container, sections) and blocking theme init script
 
 ### Phase 2: Content Sections
 **Goal**: A visitor sees all 8 page sections with real content from the job search toolkit, laid out in the editorial long-page format, and can navigate between them
@@ -103,7 +103,7 @@ Phases execute in numeric order: 1 > 2 > 3 > 4 > 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation + Design Token System | 0/0 | Not started | - |
+| 1. Foundation + Design Token System | 0/2 | Planned | - |
 | 2. Content Sections | 0/0 | Not started | - |
 | 3. Dual-Mode Theming | 0/0 | Not started | - |
 | 4. URL Customization | 0/0 | Not started | - |
@@ -111,4 +111,4 @@ Phases execute in numeric order: 1 > 2 > 3 > 4 > 5
 
 ---
 *Roadmap created: 2026-03-02*
-*Last updated: 2026-03-02*
+*Last updated: 2026-03-02 after Phase 1 planning*
