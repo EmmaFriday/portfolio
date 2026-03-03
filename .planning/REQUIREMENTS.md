@@ -17,10 +17,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Content
 
-- [ ] **CONT-01**: Hero section displays name, role positioning ("Senior UX & Product Designer"), experience summary, and illustrated character
-- [ ] **CONT-02**: Impact metrics section displays 6 key metrics as large, scannable figures with context
-- [ ] **CONT-03**: "What I Do" section breaks down specialties into categories (UX & Product Design, Design Systems, AI Workflows, Research & Strategy)
-- [ ] **CONT-04**: 4-5 case study preview cards displayed vertically with outcome-first title, key metric, role, and strategic hook
+- [x] **CONT-01**: Hero section displays name, role positioning ("Senior UX & Product Designer"), experience summary, and illustrated character
+- [x] **CONT-02**: Impact metrics section displays 6 key metrics as large, scannable figures with context
+- [x] **CONT-03**: "What I Do" section breaks down specialties into categories (UX & Product Design, Design Systems, AI Workflows, Research & Strategy)
+- [x] **CONT-04**: 4-5 case study preview cards displayed vertically with outcome-first title, key metric, role, and strategic hook
 - [ ] **CONT-05**: "Beyond the Portfolio" section shows personality, interests, and the human behind the work
 - [ ] **CONT-06**: "What I Stand For" section communicates design values and philosophy
 - [ ] **CONT-07**: "The Right Fit" section explicitly positions what roles, teams, and problems Marie is best for
@@ -106,10 +106,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | THEME-03 | Phase 1 | Complete |
 | THEME-04 | Phase 3 | Pending |
 | THEME-05 | Phase 1 | Complete |
-| CONT-01 | Phase 2 | Pending |
-| CONT-02 | Phase 2 | Pending |
-| CONT-03 | Phase 2 | Pending |
-| CONT-04 | Phase 2 | Pending |
+| CONT-01 | Phase 2 | Complete |
+| CONT-02 | Phase 2 | Complete |
+| CONT-03 | Phase 2 | Complete |
+| CONT-04 | Phase 2 | Complete |
 | CONT-05 | Phase 2 | Pending |
 | CONT-06 | Phase 2 | Pending |
 | CONT-07 | Phase 2 | Pending |

@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-last_updated: "2026-03-03T01:58:29Z"
+last_updated: "2026-03-03T02:02:50Z"
 progress:
   total_phases: 2
   completed_phases: 1
   total_plans: 5
-  completed_plans: 3
+  completed_plans: 4
 ---
 
 # Project State
@@ -23,28 +23,28 @@ See: .planning/PROJECT.md (updated 2026-03-02)
 ## Current Position
 
 Phase: 2 of 5 (Content Sections)
-Plan: 1 of 3 in current phase
-Status: Plan 02-01 complete, continuing Phase 2
-Last activity: 2026-03-02 -- Completed 02-01-PLAN.md (content data layer + navigation)
+Plan: 2 of 3 in current phase
+Status: Plan 02-02 complete, continuing Phase 2
+Last activity: 2026-03-02 -- Completed 02-02-PLAN.md (upper showcase sections)
 
-Progress: [###.......] 30%
+Progress: [####......] 40%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 3
+- Total plans completed: 4
 - Average duration: 2.3min
-- Total execution time: 0.12 hours
+- Total execution time: 0.15 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-foundation | 2 | 5min | 2.5min |
-| 02-content-sections | 1 | 2min | 2min |
+| 02-content-sections | 2 | 4min | 2min |
 
 **Recent Trend:**
-- Last 5 plans: 3min, 2min, 2min
+- Last 5 plans: 3min, 2min, 2min, 2min
 - Trend: stable
 
 *Updated after each plan completion*
@@ -69,6 +69,8 @@ Recent decisions affecting current work:
 - [02-01]: Plain anchor tags instead of Next.js Link for hash navigation (avoids client-side routing overhead)
 - [02-01]: CSS scroll-padding-top on html rather than scroll-margin-top on each section (DRY, more reliable in Safari)
 - [02-01]: Nav hidden on mobile with hidden md:flex (mobile nav deferred)
+- [02-02]: No section id on Hero or WhatIDo (neither needs nav targeting)
+- [02-02]: CaseStudyCard is a static div, not clickable (full case study pages are v2)
 
 ### Pending Todos
 
@@ -82,5 +84,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-03-02
-Stopped at: Completed 02-01-PLAN.md
+Stopped at: Completed 02-02-PLAN.md
 Resume file: None
