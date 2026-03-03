@@ -2,13 +2,13 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: unknown
-last_updated: "2026-03-03T00:00:51.631Z"
+status: executing
+last_updated: "2026-03-03T01:58:29Z"
 progress:
-  total_phases: 1
+  total_phases: 2
   completed_phases: 1
-  total_plans: 2
-  completed_plans: 2
+  total_plans: 5
+  completed_plans: 3
 ---
 
 # Project State
@@ -18,33 +18,34 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-02)
 
 **Core value:** Present case studies compellingly and be customizable per job application via URL parameters
-**Current focus:** Phase 1: Foundation + Design Token System
+**Current focus:** Phase 2: Content Sections
 
 ## Current Position
 
-Phase: 1 of 5 (Foundation + Design Token System) -- COMPLETE
-Plan: 2 of 2 in current phase (all plans complete)
-Status: Phase 1 complete, ready for Phase 2 planning
-Last activity: 2026-03-02 -- Completed 01-02-PLAN.md (responsive layout shell + blocking theme init)
+Phase: 2 of 5 (Content Sections)
+Plan: 1 of 3 in current phase
+Status: Plan 02-01 complete, continuing Phase 2
+Last activity: 2026-03-02 -- Completed 02-01-PLAN.md (content data layer + navigation)
 
-Progress: [##........] 20%
+Progress: [###.......] 30%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 2
-- Average duration: 2.5min
-- Total execution time: 0.08 hours
+- Total plans completed: 3
+- Average duration: 2.3min
+- Total execution time: 0.12 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-foundation | 2 | 5min | 2.5min |
+| 02-content-sections | 1 | 2min | 2min |
 
 **Recent Trend:**
-- Last 5 plans: 3min, 2min
-- Trend: --
+- Last 5 plans: 3min, 2min, 2min
+- Trend: stable
 
 *Updated after each plan completion*
 
@@ -64,6 +65,10 @@ Recent decisions affecting current work:
 - [01-02]: Inline styles with var() for layout components rather than Tailwind arbitrary values
 - [01-02]: Blocking script defaults to light theme and clears localStorage when no ?mode= param
 - [01-02]: --bg-header semantic token for frosted glass header backgrounds
+- [02-01]: Single content.ts file co-locates all section data for easy editing
+- [02-01]: Plain anchor tags instead of Next.js Link for hash navigation (avoids client-side routing overhead)
+- [02-01]: CSS scroll-padding-top on html rather than scroll-margin-top on each section (DRY, more reliable in Safari)
+- [02-01]: Nav hidden on mobile with hidden md:flex (mobile nav deferred)
 
 ### Pending Todos
 
@@ -77,5 +82,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-03-02
-Stopped at: Completed 01-02-PLAN.md (Phase 1 complete)
+Stopped at: Completed 02-01-PLAN.md
 Resume file: None

@@ -25,7 +25,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **CONT-06**: "What I Stand For" section communicates design values and philosophy
 - [ ] **CONT-07**: "The Right Fit" section explicitly positions what roles, teams, and problems Marie is best for
 - [ ] **CONT-08**: Contact section with email link and LinkedIn as clear CTA
-- [ ] **CONT-09**: Case study content sourced from job search toolkit master files at build time
+- [x] **CONT-09**: Case study content sourced from job search toolkit master files at build time
 
 ### URL Customization
 
@@ -42,7 +42,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **TECH-03**: Page loads in under 3 seconds on standard connection
 - [ ] **TECH-04**: Open Graph meta tags render professional previews when URL is shared
 - [ ] **TECH-05**: Site deployed to hosting platform with custom domain support
-- [ ] **TECH-06**: Smooth scroll navigation between sections with sticky header
+- [x] **TECH-06**: Smooth scroll navigation between sections with sticky header
 
 ## v1.x Requirements
 
@@ -114,7 +114,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CONT-06 | Phase 2 | Pending |
 | CONT-07 | Phase 2 | Pending |
 | CONT-08 | Phase 2 | Pending |
-| CONT-09 | Phase 2 | Pending |
+| CONT-09 | Phase 2 | Complete |
 | URL-01 | Phase 4 | Pending |
 | URL-02 | Phase 4 | Pending |
 | URL-03 | Phase 4 | Pending |
@@ -125,7 +125,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | TECH-03 | Phase 5 | Pending |
 | TECH-04 | Phase 5 | Pending |
 | TECH-05 | Phase 5 | Pending |
-| TECH-06 | Phase 2 | Pending |
+| TECH-06 | Phase 2 | Complete |
 
 **Coverage:**
 - v1 requirements: 25 total
