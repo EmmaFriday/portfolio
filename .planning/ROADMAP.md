@@ -45,12 +45,12 @@ Plans:
   3. Impact metrics section displays 6 real metrics as large, scannable figures with contextual descriptions
   4. Clicking a section link in the sticky header smooth-scrolls to that section, and the header remains visible during scroll
   5. Contact section displays a working mailto link and LinkedIn URL as clear calls to action
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 02-01: TBD
-- [ ] 02-02: TBD
-- [ ] 02-03: TBD
+- [ ] 02-01-PLAN.md -- Typed content data layer (case studies, metrics, nav links) and smooth-scroll navigation in Header
+- [ ] 02-02-PLAN.md -- Upper showcase sections: Hero, What I Do, Impact Metrics, Case Studies
+- [ ] 02-03-PLAN.md -- Personal voice sections (Beyond, Stand For, Right Fit, Contact) and full page assembly
 
 ### Phase 3: Dual-Mode Theming
 **Goal**: Visitors experience two distinct visual personalities -- a clean Notion-like light mode and a retro sci-fi dark mode -- and can switch between them via a designed toggle in the header
@@ -104,11 +104,11 @@ Phases execute in numeric order: 1 > 2 > 3 > 4 > 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation + Design Token System | 2/2 | Complete | 2026-03-02 |
-| 2. Content Sections | 0/0 | Not started | - |
+| 2. Content Sections | 0/3 | In progress | - |
 | 3. Dual-Mode Theming | 0/0 | Not started | - |
 | 4. URL Customization | 0/0 | Not started | - |
 | 5. Deployment + Production | 0/0 | Not started | - |
 
 ---
 *Roadmap created: 2026-03-02*
-*Last updated: 2026-03-02 after Phase 1 completion*
+*Last updated: 2026-03-02 after Phase 2 planning*
