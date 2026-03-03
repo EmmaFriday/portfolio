@@ -2,3 +2,9 @@
 @import "../styles/tokens.css";
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+/* Smooth scroll navigation with sticky header offset */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+}
