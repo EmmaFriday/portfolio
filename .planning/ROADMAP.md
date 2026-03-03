@@ -13,7 +13,7 @@ This roadmap delivers a dual-mode portfolio site in five phases, ordered by arch
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation + Design Token System** - Project scaffold, three-tier CSS token system, blocking theme init script, responsive base layout
-- [ ] **Phase 2: Content Sections** - All 8 page sections rendered with real case study data from the job search toolkit
+- [x] **Phase 2: Content Sections** - All 8 page sections rendered with real case study data from the job search toolkit
 - [ ] **Phase 3: Dual-Mode Theming** - Light and dark modes visually complete and switchable via header toggle
 - [ ] **Phase 4: URL Customization** - Query parameter system for mode control and case study reordering
 - [ ] **Phase 5: Deployment + Production** - Live site on Vercel with custom domain, OG previews, and performance/accessibility sign-off
@@ -48,9 +48,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 02-01-PLAN.md -- Typed content data layer (case studies, metrics, nav links) and smooth-scroll navigation in Header
-- [ ] 02-02-PLAN.md -- Upper showcase sections: Hero, What I Do, Impact Metrics, Case Studies
-- [ ] 02-03-PLAN.md -- Personal voice sections (Beyond, Stand For, Right Fit, Contact) and full page assembly
+- [x] 02-01-PLAN.md -- Typed content data layer (case studies, metrics, nav links) and smooth-scroll navigation in Header
+- [x] 02-02-PLAN.md -- Upper showcase sections: Hero, What I Do, Impact Metrics, Case Studies
+- [x] 02-03-PLAN.md -- Personal voice sections (Beyond, Stand For, Right Fit, Contact) and full page assembly
 
 ### Phase 3: Dual-Mode Theming
 **Goal**: Visitors experience two distinct visual personalities -- a clean Notion-like light mode and a retro sci-fi dark mode -- and can switch between them via a designed toggle in the header
@@ -104,11 +104,11 @@ Phases execute in numeric order: 1 > 2 > 3 > 4 > 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation + Design Token System | 2/2 | Complete | 2026-03-02 |
-| 2. Content Sections | 0/3 | In progress | - |
+| 2. Content Sections | 3/3 | Complete | 2026-03-02 |
 | 3. Dual-Mode Theming | 0/0 | Not started | - |
 | 4. URL Customization | 0/0 | Not started | - |
 | 5. Deployment + Production | 0/0 | Not started | - |
 
 ---
 *Roadmap created: 2026-03-02*
-*Last updated: 2026-03-02 after Phase 2 planning*
+*Last updated: 2026-03-02 after Phase 2 execution complete*

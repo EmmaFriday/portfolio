@@ -21,10 +21,10 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **CONT-02**: Impact metrics section displays 6 key metrics as large, scannable figures with context
 - [x] **CONT-03**: "What I Do" section breaks down specialties into categories (UX & Product Design, Design Systems, AI Workflows, Research & Strategy)
 - [x] **CONT-04**: 4-5 case study preview cards displayed vertically with outcome-first title, key metric, role, and strategic hook
-- [ ] **CONT-05**: "Beyond the Portfolio" section shows personality, interests, and the human behind the work
-- [ ] **CONT-06**: "What I Stand For" section communicates design values and philosophy
-- [ ] **CONT-07**: "The Right Fit" section explicitly positions what roles, teams, and problems Marie is best for
-- [ ] **CONT-08**: Contact section with email link and LinkedIn as clear CTA
+- [x] **CONT-05**: "Beyond the Portfolio" section shows personality, interests, and the human behind the work
+- [x] **CONT-06**: "What I Stand For" section communicates design values and philosophy
+- [x] **CONT-07**: "The Right Fit" section explicitly positions what roles, teams, and problems Marie is best for
+- [x] **CONT-08**: Contact section with email link and LinkedIn as clear CTA
 - [x] **CONT-09**: Case study content sourced from job search toolkit master files at build time
 
 ### URL Customization
@@ -110,10 +110,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CONT-02 | Phase 2 | Complete |
 | CONT-03 | Phase 2 | Complete |
 | CONT-04 | Phase 2 | Complete |
-| CONT-05 | Phase 2 | Pending |
-| CONT-06 | Phase 2 | Pending |
-| CONT-07 | Phase 2 | Pending |
-| CONT-08 | Phase 2 | Pending |
+| CONT-05 | Phase 2 | Complete |
+| CONT-06 | Phase 2 | Complete |
+| CONT-07 | Phase 2 | Complete |
+| CONT-08 | Phase 2 | Complete |
 | CONT-09 | Phase 2 | Complete |
 | URL-01 | Phase 4 | Pending |
 | URL-02 | Phase 4 | Pending |
