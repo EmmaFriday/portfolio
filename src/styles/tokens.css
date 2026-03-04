@@ -37,7 +37,16 @@
   --color-gray-700: #374151;
   --color-gray-800: #1f2937;
   --color-gray-900: #111827;
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* Teal palette -- dark mode backgrounds and accents */
+  --color-teal-950: #0a1628;
+  --color-teal-900: #0d1f33;
+  --color-teal-800: #122a3d;
+  --color-teal-750: #153248;
+  --color-teal-600: #1a5c6e;
+  --color-teal-400: #2dd4bf;
+  --color-teal-300: #5eead4;
+  --color-cyan-300: #67e8f9;
 }
 
 /* ===================================================================
@@ -82,6 +91,11 @@
 
   /* Header (frosted glass) */
   --bg-header: rgba(255, 255, 255, 0.85);
+
+  /* Typography -- semantic font stacks (swap per theme) */
+  --font-heading: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 }
 
 /* ===================================================================
@@ -90,11 +104,11 @@
    =================================================================== */
 
 [data-theme="dark"] {
-  /* Backgrounds */
-  --bg-primary: var(--color-black);
-  --bg-secondary: #0f0f1a;
-  --bg-surface: #1a1a2e;
-  --bg-surface-elevated: #1e1e35;
+  /* Backgrounds (teal-shifted palette) */
+  --bg-primary: var(--color-teal-950);
+  --bg-secondary: var(--color-teal-900);
+  --bg-surface: var(--color-teal-800);
+  --bg-surface-elevated: var(--color-teal-750);
 
   /* Text */
   --text-primary: var(--color-gray-100);
@@ -104,11 +118,11 @@
 
   /* Accent (cyan for sci-fi feel) */
   --accent-primary: var(--color-cyan-400);
-  --accent-hover: var(--color-cyan-500);
+  --accent-hover: var(--color-teal-300);
 
-  /* Borders (semi-transparent for sci-fi feel) */
-  --border-default: rgba(255, 255, 255, 0.1);
-  --border-subtle: rgba(255, 255, 255, 0.06);
+  /* Borders (teal-tinted semi-transparent) */
+  --border-default: rgba(45, 212, 191, 0.15);
+  --border-subtle: rgba(45, 212, 191, 0.08);
 
   /* Shadows (deeper in dark mode) */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
@@ -116,11 +130,16 @@
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5);
 
   /* Glow (medium cyan -- Vercel energy, not neon terminal) */
-  --glow-accent: 0 0 20px rgba(34, 211, 238, 0.15);
-  --glow-subtle: 0 0 10px rgba(34, 211, 238, 0.08);
+  --glow-accent: 0 0 20px rgba(34, 211, 238, 0.2);
+  --glow-subtle: 0 0 10px rgba(34, 211, 238, 0.1);
 
-  /* Header (frosted glass) */
-  --bg-header: rgba(10, 10, 15, 0.85);
+  /* Header (teal-tinted frosted glass) */
+  --bg-header: rgba(10, 22, 40, 0.88);
+
+  /* Typography -- dark mode font stacks */
+  --font-heading: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-geist-mono), ui-monospace, monospace;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 }
 
 /* ===================================================================
