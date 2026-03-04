@@ -61,11 +61,11 @@ Plans:
   2. Dark mode displays a black background with teal/cyan accents, glowing effects on decorative elements, and a sci-fi character placeholder
   3. The mode toggle is visible in the header, styled as a designed interaction piece (not a generic switch), and clicking it switches between modes instantly without page reload
   4. Both modes pass a full WCAG 2.1 AA audit: 4.5:1 contrast ratios, keyboard navigation works on all interactive elements, screen reader announces all content and controls, focus indicators are visible in both themes
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 03-01: TBD
-- [ ] 03-02: TBD
+- [x] 03-01-PLAN.md -- Token system expansion (typography tokens, teal palette, font loading, transitions)
+- [ ] 03-02-PLAN.md -- Theme toggle, dark mode decorations (scanlines, glow, brackets, labels), accessibility audit
 
 ### Phase 4: URL Customization
 **Goal**: The job search toolkit can generate URLs that control which theme visitors see and which case studies appear in which order, making the portfolio a per-application instrument
@@ -105,7 +105,7 @@ Phases execute in numeric order: 1 > 2 > 3 > 4 > 5
 |-------|----------------|--------|-----------|
 | 1. Foundation + Design Token System | 2/2 | Complete | 2026-03-02 |
 | 2. Content Sections | 3/3 | Complete | 2026-03-02 |
-| 3. Dual-Mode Theming | 0/0 | Not started | - |
+| 3. Dual-Mode Theming | 1/2 | In progress | - |
 | 4. URL Customization | 0/0 | Not started | - |
 | 5. Deployment + Production | 0/0 | Not started | - |
 
