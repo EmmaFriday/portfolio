@@ -28,3 +28,94 @@ p, span, li,
     box-shadow 300ms ease,
     opacity 300ms ease;
 }
+
+/* ===================================================================
+   DARK MODE DECORATIONS
+   =================================================================== */
+
+/* Scanline overlay (dark mode only) */
+[data-theme="dark"] body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+  opacity: 0.4;
+}
+
+/* Card glow effect (dark mode only) */
+[data-theme="dark"] .card-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+[data-theme="dark"] .card-glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: radial-gradient(
+    600px circle at 50% 50%,
+    rgba(34, 211, 238, 0.25),
+    transparent 40%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.4;
+  transition: opacity 300ms ease;
+  pointer-events: none;
+}
+
+[data-theme="dark"] .card-glow:hover::before {
+  opacity: 1;
+}
+
+/* Corner bracket decorations (dark mode only) */
+[data-theme="dark"] .corner-brackets {
+  position: relative;
+}
+
+[data-theme="dark"] .corner-brackets::before,
+[data-theme="dark"] .corner-brackets::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-color: var(--accent-primary);
+  border-style: solid;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+[data-theme="dark"] .corner-brackets::before {
+  top: -1px;
+  left: -1px;
+  border-width: 2px 0 0 2px;
+}
+
+[data-theme="dark"] .corner-brackets::after {
+  bottom: -1px;
+  right: -1px;
+  border-width: 0 2px 2px 0;
+}
+
+/* Focus-visible styles */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
