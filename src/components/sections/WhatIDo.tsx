@@ -11,6 +11,20 @@ export function WhatIDo() {
       }}
     >
       <PageContainer>
+        <span
+          className="hidden dark:block"
+          style={{
+            fontFamily: "var(--font-mono)",
+            fontSize: "var(--text-sm)",
+            letterSpacing: "0.15em",
+            textTransform: "uppercase",
+            color: "var(--accent-primary)",
+            marginBottom: "var(--space-2)",
+            opacity: 0.7,
+          }}
+        >
+          SPECIALIZATION_MATRIX
+        </span>
         <h2
           style={{
             fontSize: "var(--text-h2)",
@@ -19,6 +33,7 @@ export function WhatIDo() {
             fontWeight: "var(--font-semibold)",
             color: "var(--text-primary)",
             marginBottom: "var(--space-12)",
+            fontFamily: "var(--font-heading)",
           }}
         >
           What I Do
@@ -39,6 +54,7 @@ export function WhatIDo() {
                   lineHeight: "var(--text-h3-lh)",
                   fontWeight: "var(--font-semibold)",
                   color: "var(--text-primary)",
+                  fontFamily: "var(--font-heading)",
                 }}
               >
                 {category.title}

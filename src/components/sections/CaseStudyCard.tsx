@@ -7,6 +7,7 @@ interface CaseStudyCardProps {
 export function CaseStudyCard({ study }: CaseStudyCardProps) {
   return (
     <div
+      className="card-glow corner-brackets"
       style={{
         backgroundColor: "var(--bg-surface)",
         border: "1px solid var(--border-default)",
@@ -22,6 +23,7 @@ export function CaseStudyCard({ study }: CaseStudyCardProps) {
           letterSpacing: "var(--tracking-tight)",
           fontWeight: "var(--font-semibold)",
           color: "var(--text-primary)",
+          fontFamily: "var(--font-heading)",
         }}
       >
         {study.title}

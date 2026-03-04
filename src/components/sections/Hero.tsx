@@ -17,6 +17,7 @@ export function Hero() {
             letterSpacing: "var(--tracking-tight)",
             fontWeight: "var(--font-semibold)",
             color: "var(--text-primary)",
+            fontFamily: "var(--font-heading)",
           }}
         >
           {heroContent.name}
