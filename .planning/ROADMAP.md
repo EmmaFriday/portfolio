@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation + Design Token System** - Project scaffold, three-tier CSS token system, blocking theme init script, responsive base layout
 - [x] **Phase 2: Content Sections** - All 8 page sections rendered with real case study data from the job search toolkit
-- [ ] **Phase 3: Dual-Mode Theming** - Light and dark modes visually complete and switchable via header toggle
+- [x] **Phase 3: Dual-Mode Theming** - Light and dark modes visually complete and switchable via header toggle
 - [ ] **Phase 4: URL Customization** - Query parameter system for mode control and case study reordering
 - [ ] **Phase 5: Deployment + Production** - Live site on Vercel with custom domain, OG previews, and performance/accessibility sign-off
 
@@ -65,7 +65,7 @@ Plans:
 
 Plans:
 - [x] 03-01-PLAN.md -- Token system expansion (typography tokens, teal palette, font loading, transitions)
-- [ ] 03-02-PLAN.md -- Theme toggle, dark mode decorations (scanlines, glow, brackets, labels), accessibility audit
+- [x] 03-02-PLAN.md -- Theme toggle, dark mode decorations (scanlines, glow, brackets, labels), accessibility audit
 
 ### Phase 4: URL Customization
 **Goal**: The job search toolkit can generate URLs that control which theme visitors see and which case studies appear in which order, making the portfolio a per-application instrument
@@ -105,10 +105,10 @@ Phases execute in numeric order: 1 > 2 > 3 > 4 > 5
 |-------|----------------|--------|-----------|
 | 1. Foundation + Design Token System | 2/2 | Complete | 2026-03-02 |
 | 2. Content Sections | 3/3 | Complete | 2026-03-02 |
-| 3. Dual-Mode Theming | 1/2 | In progress | - |
+| 3. Dual-Mode Theming | 2/2 | Complete | 2026-03-04 |
 | 4. URL Customization | 0/0 | Not started | - |
 | 5. Deployment + Production | 0/0 | Not started | - |
 
 ---
 *Roadmap created: 2026-03-02*
-*Last updated: 2026-03-02 after Phase 2 execution complete*
+*Last updated: 2026-03-04 after Phase 3 execution complete*

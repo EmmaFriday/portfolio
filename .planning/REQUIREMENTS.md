@@ -12,7 +12,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **THEME-01**: Site displays in light mode with clean, white, Notion-like aesthetic and current illustrated character
 - [x] **THEME-02**: Site displays in dark mode with black background, teal/cyan accents, glowing effects, and sci-fi character placeholder
 - [x] **THEME-03**: Both modes share identical layout structure -- only visual tokens differ
-- [ ] **THEME-04**: Theme toggle is visible in the header, styled as a designed interaction piece
+- [x] **THEME-04**: Theme toggle is visible in the header, styled as a designed interaction piece
 - [x] **THEME-05**: No flash of wrong theme on page load (blocking inline script reads URL param before first paint)
 
 ### Content
@@ -38,7 +38,7 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Technical
 
 - [x] **TECH-01**: Site is responsive across desktop, tablet, and mobile breakpoints
-- [ ] **TECH-02**: Both modes pass WCAG 2.1 AA (4.5:1 contrast, keyboard nav, screen reader, focus indicators)
+- [x] **TECH-02**: Both modes pass WCAG 2.1 AA (4.5:1 contrast, keyboard nav, screen reader, focus indicators)
 - [ ] **TECH-03**: Page loads in under 3 seconds on standard connection
 - [ ] **TECH-04**: Open Graph meta tags render professional previews when URL is shared
 - [ ] **TECH-05**: Site deployed to hosting platform with custom domain support
@@ -104,7 +104,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | THEME-01 | Phase 3 | Complete |
 | THEME-02 | Phase 3 | Complete |
 | THEME-03 | Phase 1 | Complete |
-| THEME-04 | Phase 3 | Pending |
+| THEME-04 | Phase 3 | Complete |
 | THEME-05 | Phase 1 | Complete |
 | CONT-01 | Phase 2 | Complete |
 | CONT-02 | Phase 2 | Complete |
@@ -121,7 +121,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | URL-04 | Phase 4 | Pending |
 | URL-05 | Phase 4 | Pending |
 | TECH-01 | Phase 1 | Complete |
-| TECH-02 | Phase 3 | Pending |
+| TECH-02 | Phase 3 | Complete |
 | TECH-03 | Phase 5 | Pending |
 | TECH-04 | Phase 5 | Pending |
 | TECH-05 | Phase 5 | Pending |
