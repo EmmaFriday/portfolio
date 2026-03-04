@@ -1,9 +1,11 @@
 import { whatIDoCategories } from "@/data/content";
 import { PageContainer } from "@/components/layout/PageContainer";
+import { SpotlightCard } from "@/components/ui/SpotlightCard";
 
 export function WhatIDo() {
   return (
     <section
+      className="cosmic-bg"
       style={{
         paddingTop: "var(--space-section)",
         paddingBottom: "var(--space-section)",
@@ -44,10 +46,20 @@ export function WhatIDo() {
             gridTemplateColumns:
               "repeat(auto-fill, minmax(min(100%, 280px), 1fr))",
             gap: "var(--space-8)",
+            position: "relative",
+            zIndex: 1,
           }}
         >
           {whatIDoCategories.map((category) => (
-            <div key={category.title}>
+            <SpotlightCard
+              key={category.title}
+              style={{
+                padding: "var(--space-8)",
+                borderRadius: "var(--radius-lg)",
+                backgroundColor: "var(--bg-surface)",
+                border: "1px solid var(--border-default)",
+              }}
+            >
               <h3
                 style={{
                   fontSize: "var(--text-h3)",
@@ -69,7 +81,7 @@ export function WhatIDo() {
               >
                 {category.description}
               </p>
-            </div>
+            </SpotlightCard>
           ))}
         </div>
       </PageContainer>

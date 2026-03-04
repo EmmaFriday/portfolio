@@ -1,5 +1,6 @@
 import { impactMetrics } from "@/data/content";
 import { PageContainer } from "@/components/layout/PageContainer";
+import { SpotlightCard } from "@/components/ui/SpotlightCard";
 
 export function ImpactMetrics() {
   return (
@@ -47,12 +48,20 @@ export function ImpactMetrics() {
           }}
         >
           {impactMetrics.map((metric) => (
-            <div key={metric.label}>
+            <SpotlightCard
+              key={metric.label}
+              style={{
+                padding: "var(--space-8)",
+                borderRadius: "var(--radius-lg)",
+                backgroundColor: "var(--bg-surface)",
+                border: "1px solid var(--border-default)",
+              }}
+            >
               <span
                 style={{
                   display: "block",
-                  fontSize: "var(--text-display)",
-                  lineHeight: "var(--text-display-lh)",
+                  fontSize: "var(--text-h2)",
+                  lineHeight: "var(--text-h2-lh)",
                   color: "var(--accent-primary)",
                   fontWeight: "var(--font-semibold)",
                 }}
@@ -80,7 +89,7 @@ export function ImpactMetrics() {
               >
                 {metric.context}
               </p>
-            </div>
+            </SpotlightCard>
           ))}
         </div>
       </PageContainer>

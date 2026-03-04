@@ -149,8 +149,8 @@
    =================================================================== */
 
 :root {
-  /* Body: 16px -> 18px */
-  --text-body: clamp(1rem, 0.958rem + 0.208vw, 1.125rem);
+  /* Body: 15px (fixed) */
+  --text-body: 0.9375rem;
   --text-body-lh: 1.6;
 
   /* Small: 14px (fixed) */
@@ -198,8 +198,8 @@
   --space-24: 6rem;     /* 96px */
   --space-32: 8rem;     /* 128px */
 
-  /* Fluid section spacing: 80px -> 160px */
-  --space-section: clamp(5rem, 2.5rem + 8.333vw, 10rem);
+  /* Fluid section spacing: 50px -> 130px */
+  --space-section: clamp(3.125rem, 1.25rem + 6.25vw, 8.125rem);
 
   /* Container padding: 16px -> 48px */
   --space-container: clamp(1rem, 0rem + 3.333vw, 3rem);
