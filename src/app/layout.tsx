@@ -1,12 +1,32 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Figtree, DM_Sans, Space_Grotesk, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import "./globals.css";
 
-const inter = Inter({
+const figtree = Figtree({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-inter",
+  variable: "--font-figtree",
+  weight: ["400", "600"],
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-dm-sans",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-space-grotesk",
+  weight: ["400", "600", "700"],
+});
+
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-geist-mono",
 });
 
 export const metadata: Metadata = {
@@ -20,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable} suppressHydrationWarning>
+    <html lang="en" className={`${figtree.variable} ${dmSans.variable} ${spaceGrotesk.variable} ${geistMono.variable}`} suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -33,7 +53,7 @@ export default function RootLayout({
         style={{
           backgroundColor: "var(--bg-primary)",
           color: "var(--text-primary)",
-          fontFamily: "var(--font-sans)",
+          fontFamily: "var(--font-body)",
           fontSize: "var(--text-body)",
           lineHeight: "var(--text-body-lh)",
         }}
