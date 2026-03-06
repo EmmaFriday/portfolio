@@ -1,6 +1,7 @@
 # Phase 4: URL Customization - Context
 
 **Gathered:** 2026-03-06
+**Updated:** 2026-03-06
 **Status:** Ready for planning
 
 <domain>
@@ -13,8 +14,20 @@ Query parameter system for mode control (?mode=) and case study reordering (?ord
 <decisions>
 ## Implementation Decisions
 
+### Blocking script scope
+- Blocking `<head>` script handles `?mode=` ONLY — no order param in the script
+- Order is a client-side rendering concern with no flash risk
+- Script stays focused on theme flash prevention
+
+### URL persistence & priority
+- URL wins, fallback to localStorage — no `?mode=` checks localStorage first (from a previous toggle), toolkit links with `?mode=` override it
+- Direct visitors returning without a URL param get their last-used theme from localStorage
+- Toolkit-generated links always control the experience via explicit params
+
 ### URL sync behavior
-- Theme toggle always syncs current mode to URL via `history.replaceState`
+- Theme toggle syncs current mode to URL via `history.replaceState` (not pushState)
+- Back button navigates away from the page, not through theme changes — toggles aren't navigation events
+- Toggling theme = sharing intent — if someone copies the URL after toggling to dark, recipients see dark mode
 - Only changed params appear in URL (no defaults) — keeps URLs clean
 - Toggling mode preserves all other params (order, UTM, etc.)
 - Unknown query parameters (utm_source, etc.) are preserved untouched
@@ -26,9 +39,15 @@ Query parameter system for mode control (?mode=) and case study reordering (?ord
 - Invalid indices are silently skipped — `?order=1,99,3` shows studies 1 and 3
 - If all indices are invalid (zero valid studies), fall back to default order
 - Indices are stable: adding a 5th case study doesn't change what 1-4 refer to
+- Auto-extend: adding index 5 to content.ts makes `?order=5` work automatically, no mapping maintenance
+- Duplicate indices deduplicated silently — `?order=1,1,2` shows studies 1 and 2 once each
+
+### Filtered UI behavior
+- No heading or layout change when fewer studies shown — same "Selected Work" heading regardless of count
+- 2 cards just means less scrolling — clean and simple
 
 ### Default & fallback behavior
-- No params = light mode + all case studies in default order
+- No params + no localStorage = light mode + all case studies in default order
 - Invalid `?mode=` value silently defaults to light mode with console warning
 - Invalid `?order=` indices silently skipped with console warning
 - Graceful degradation — visitor always sees a working portfolio
@@ -53,6 +72,7 @@ Query parameter system for mode control (?mode=) and case study reordering (?ord
 - The blocking `<head>` script already handles `?mode=` for flash prevention — extend rather than replace
 - `?order=2,4` doubling as a filter is a power feature for targeting specific employers with relevant case studies only
 - Console warnings for debugging but invisible to hiring managers viewing the portfolio
+- replaceState for toggle sync means the URL is always shareable but back button isn't cluttered with theme changes
 
 </specifics>
 
@@ -60,10 +80,10 @@ Query parameter system for mode control (?mode=) and case study reordering (?ord
 ## Existing Code Insights
 
 ### Reusable Assets
-- **Blocking theme script** (layout.tsx L46-48): Already reads `?mode=` and sets `data-theme` before first paint. Needs extension for URL sync back, but the read path works.
+- **Blocking theme script** (layout.tsx L45-49): Already reads `?mode=` and sets `data-theme` before first paint. Currently clears localStorage when no mode param — needs update for localStorage fallback behavior.
 - **ThemeProvider** (ThemeProvider.tsx): Wraps `next-themes` with `attribute="data-theme"`, `defaultTheme="light"`. Theme toggle integration point.
 - **ThemeToggle** (ThemeToggle.tsx): Uses `useTheme()` from next-themes. Needs `replaceState` call added on toggle.
-- **caseStudies array** (content.ts L77-114): Static typed array of 4 `CaseStudy` objects with `id` field. Order param indexes into this array.
+- **caseStudies array** (content.ts): Static typed array of 4 `CaseStudy` objects with `id` field. Order param indexes into this array.
 
 ### Established Patterns
 - **Client/server split**: `page.tsx` is a server component; interactive components use `"use client"` directive
@@ -73,9 +93,9 @@ Query parameter system for mode control (?mode=) and case study reordering (?ord
 
 ### Integration Points
 - **ThemeToggle.tsx**: Add `replaceState` call after `setTheme()` to sync mode to URL
-- **CaseStudies component**: Needs to accept an ordered/filtered array instead of importing `caseStudies` directly
-- **layout.tsx blocking script**: May need to also read `?order=` for SSR considerations, or order can be client-only
-- **page.tsx**: May need to become a client component or pass searchParams to child components
+- **CaseStudies component**: Currently imports `caseStudies` directly and maps over it — needs to accept an ordered/filtered array
+- **layout.tsx blocking script**: Stays mode-only; needs update to respect localStorage when no `?mode=` param
+- **page.tsx**: May need to become a client component or pass searchParams to child components for order param
 
 </code_context>
 
