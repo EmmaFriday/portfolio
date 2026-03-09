@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-last_updated: "2026-03-05T00:13:09.228Z"
+last_updated: "2026-03-09T18:49:46.501Z"
 progress:
-  total_phases: 3
-  completed_phases: 3
-  total_plans: 7
-  completed_plans: 7
+  total_phases: 4
+  completed_phases: 4
+  total_plans: 8
+  completed_plans: 8
 ---
 
 # Project State
@@ -18,23 +18,23 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-02)
 
 **Core value:** Present case studies compellingly and be customizable per job application via URL parameters
-**Current focus:** Phase 3: Dual-Mode Theming
+**Current focus:** Phase 4: URL Customization
 
 ## Current Position
 
-Phase: 3 of 5 (Dual-Mode Theming) -- COMPLETE
-Plan: 2 of 2 in current phase (2 complete)
-Status: Phase 3 complete, ready for Phase 4
-Last activity: 2026-03-04 -- Completed 03-02-PLAN.md (toggle, decorations, visual refinements)
+Phase: 4 of 5 (URL Customization) -- COMPLETE
+Plan: 1 of 1 in current phase (1 complete)
+Status: Phase 4 complete, ready for Phase 5
+Last activity: 2026-03-09 -- Completed 04-01-PLAN.md (URL param handling + toggle sync)
 
-Progress: [#######...] 70%
+Progress: [########..] 80%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 7
-- Average duration: 3.5min
-- Total execution time: 0.41 hours
+- Total plans completed: 8
+- Average duration: 3.3min
+- Total execution time: 0.43 hours
 
 **By Phase:**
 
@@ -43,10 +43,11 @@ Progress: [#######...] 70%
 | 01-foundation | 2 | 5min | 2.5min |
 | 02-content-sections | 3 | 7min | 2.3min |
 | 03-dual-mode-theming | 2 | 20min | 10min |
+| 04-url-customization | 1 | 1min | 1min |
 
 **Recent Trend:**
-- Last 5 plans: 2min, 2min, 3min, 2min, 18min
-- Trend: stable (18min includes checkpoint pause)
+- Last 5 plans: 2min, 3min, 2min, 18min, 1min
+- Trend: stable
 
 *Updated after each plan completion*
 
@@ -82,6 +83,9 @@ Recent decisions affecting current work:
 - [03-02]: Body text at 15px for better readability-to-density balance
 - [03-02]: Pill-shaped contact buttons matching toggle aesthetic
 - [03-02]: Cosmic starfield background on WhatIDo section in dark mode
+- [04-01]: Light mode removes ?mode= param for clean URLs (no ?mode=light in address bar)
+- [04-01]: replaceState over pushState so back button navigates away, not through theme changes
+- [04-01]: Invalid ?mode= values fall through to localStorage rather than forcing light
 
 ### Pending Todos
 
@@ -94,6 +98,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-04
-Stopped at: Completed 03-02-PLAN.md (toggle, decorations, visual refinements) -- Phase 3 complete
+Last session: 2026-03-09
+Stopped at: Completed 04-01-PLAN.md (URL param handling + toggle sync) -- Phase 4 complete
 Resume file: None

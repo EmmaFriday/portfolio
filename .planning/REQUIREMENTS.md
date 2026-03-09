@@ -29,11 +29,11 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### URL Customization
 
-- [ ] **URL-01**: ?mode=light sets initial theme to light mode
-- [ ] **URL-02**: ?mode=dark sets initial theme to dark mode
+- [x] **URL-01**: ?mode=light sets initial theme to light mode
+- [x] **URL-02**: ?mode=dark sets initial theme to dark mode
 - [ ] **URL-03**: ?order=2,1,4,3 reorders case study display according to specified sequence
-- [ ] **URL-04**: Missing params gracefully default (light mode, original order)
-- [ ] **URL-05**: Toggle state syncs back to URL via history.replaceState without page reload
+- [x] **URL-04**: Missing params gracefully default (light mode, original order)
+- [x] **URL-05**: Toggle state syncs back to URL via history.replaceState without page reload
 
 ### Technical
 
@@ -115,11 +115,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CONT-07 | Phase 2 | Complete |
 | CONT-08 | Phase 2 | Complete |
 | CONT-09 | Phase 2 | Complete |
-| URL-01 | Phase 4 | Pending |
-| URL-02 | Phase 4 | Pending |
+| URL-01 | Phase 4 | Complete |
+| URL-02 | Phase 4 | Complete |
 | URL-03 | Phase 4 | Pending |
-| URL-04 | Phase 4 | Pending |
-| URL-05 | Phase 4 | Pending |
+| URL-04 | Phase 4 | Complete |
+| URL-05 | Phase 4 | Complete |
 | TECH-01 | Phase 1 | Complete |
 | TECH-02 | Phase 3 | Complete |
 | TECH-03 | Phase 5 | Pending |
