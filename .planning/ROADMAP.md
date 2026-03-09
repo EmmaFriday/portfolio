@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Foundation + Design Token System** - Project scaffold, three-tier CSS token system, blocking theme init script, responsive base layout
 - [x] **Phase 2: Content Sections** - All 8 page sections rendered with real case study data from the job search toolkit
 - [x] **Phase 3: Dual-Mode Theming** - Light and dark modes visually complete and switchable via header toggle
-- [ ] **Phase 4: URL Customization** - Query parameter system for mode control and case study reordering
+- [ ] **Phase 4: URL Customization** - Query parameter system for theme mode control (?mode=)
 - [ ] **Phase 5: Deployment + Production** - Live site on Vercel with custom domain, OG previews, and performance/accessibility sign-off
 
 ## Phase Details
@@ -68,15 +68,15 @@ Plans:
 - [x] 03-02-PLAN.md -- Theme toggle, dark mode decorations (scanlines, glow, brackets, labels), accessibility audit
 
 ### Phase 4: URL Customization
-**Goal**: The job search toolkit can generate URLs that control which theme visitors see and which case studies appear in which order, making the portfolio a per-application instrument
+**Goal**: URLs can control which theme visitors see (?mode=dark/light), with localStorage fallback for returning visitors and replaceState sync on toggle
 **Depends on**: Phase 3
 **Requirements**: URL-01, URL-02, URL-03, URL-04, URL-05
 **Success Criteria** (what must be TRUE):
   1. Loading the site with `?mode=light` shows light mode; loading with `?mode=dark` shows dark mode
-  2. Loading with `?order=2,1,4,3` reorders the case study cards to match the specified sequence
-  3. Loading without any query parameters defaults to light mode and the original case study order -- no errors, no broken layout
-  4. After using the mode toggle, the URL updates via `history.replaceState` to reflect the current mode (e.g., toggling to dark adds `?mode=dark`) without triggering a page reload
-  5. Combining parameters (`?mode=dark&order=3,1,2,4,5`) works correctly -- both mode and order are applied simultaneously
+  2. Loading without any query parameters checks localStorage for a previously-toggled theme, defaulting to light mode if none exists
+  3. After using the mode toggle, the URL updates via `history.replaceState` to reflect the current mode (e.g., toggling to dark adds `?mode=dark`) without triggering a page reload
+  4. Invalid `?mode=` values silently default to light mode -- visitor always sees a working portfolio
+  5. Toggling theme preserves any other query parameters already in the URL (utm_source, etc.)
 **Plans**: TBD
 
 Plans:
