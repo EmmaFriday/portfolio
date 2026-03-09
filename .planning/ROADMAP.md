@@ -70,17 +70,17 @@ Plans:
 ### Phase 4: URL Customization
 **Goal**: URLs can control which theme visitors see (?mode=dark/light), with localStorage fallback for returning visitors and replaceState sync on toggle
 **Depends on**: Phase 3
-**Requirements**: URL-01, URL-02, URL-03, URL-04, URL-05
+**Requirements**: URL-01, URL-02, URL-04, URL-05 (URL-03 dropped per user decision -- case study ordering handled in content.ts at build time)
 **Success Criteria** (what must be TRUE):
   1. Loading the site with `?mode=light` shows light mode; loading with `?mode=dark` shows dark mode
   2. Loading without any query parameters checks localStorage for a previously-toggled theme, defaulting to light mode if none exists
   3. After using the mode toggle, the URL updates via `history.replaceState` to reflect the current mode (e.g., toggling to dark adds `?mode=dark`) without triggering a page reload
   4. Invalid `?mode=` values silently default to light mode -- visitor always sees a working portfolio
   5. Toggling theme preserves any other query parameters already in the URL (utm_source, etc.)
-**Plans**: TBD
+**Plans**: 1 plan
 
 Plans:
-- [ ] 04-01: TBD
+- [ ] 04-01-PLAN.md -- Blocking script localStorage fallback and ThemeToggle replaceState URL sync
 
 ### Phase 5: Deployment + Production
 **Goal**: The portfolio is live on a production URL with a custom domain, professional social sharing previews, and verified performance and accessibility
@@ -106,9 +106,9 @@ Phases execute in numeric order: 1 > 2 > 3 > 4 > 5
 | 1. Foundation + Design Token System | 2/2 | Complete | 2026-03-02 |
 | 2. Content Sections | 3/3 | Complete | 2026-03-02 |
 | 3. Dual-Mode Theming | 2/2 | Complete | 2026-03-04 |
-| 4. URL Customization | 0/0 | Not started | - |
+| 4. URL Customization | 0/1 | Not started | - |
 | 5. Deployment + Production | 0/0 | Not started | - |
 
 ---
 *Roadmap created: 2026-03-02*
-*Last updated: 2026-03-04 after Phase 3 execution complete*
+*Last updated: 2026-03-09 after Phase 4 planning complete*
