@@ -15,7 +15,17 @@ export function ThemeToggle() {
 
   return (
     <button
-      onClick={() => setTheme(isDark ? "light" : "dark")}
+      onClick={() => {
+        const newTheme = isDark ? "light" : "dark";
+        setTheme(newTheme);
+        const url = new URL(window.location.href);
+        if (newTheme === "light") {
+          url.searchParams.delete("mode");
+        } else {
+          url.searchParams.set("mode", newTheme);
+        }
+        history.replaceState(null, "", url.toString());
+      }}
       role="switch"
       aria-checked={isDark}
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
