@@ -32,7 +32,7 @@ export function ThemeToggle() {
       style={{
         position: "fixed",
         top: "calc(var(--header-height) + var(--space-3))",
-        left: "var(--space-container)",
+        right: "var(--space-container)",
         zIndex: 40,
         borderRadius: "9999px",
         padding: "var(--space-2) var(--space-4)",
